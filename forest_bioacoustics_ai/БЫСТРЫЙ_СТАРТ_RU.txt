@@ -1,0 +1,24 @@
+ПРОТОТИП FOREST BIOACOUSTICS AI — БЫСТРЫЙ СТАРТ
+
+1. Установите Python 3.10–3.12.
+2. Распакуйте архив в отдельную папку.
+3. Откройте терминал в папке проекта.
+
+Windows:
+  py -m venv .venv
+  .\.venv\Scripts\Activate.ps1
+  python -m pip install --upgrade pip
+  pip install -r requirements.txt
+  streamlit run app/main.py
+
+macOS/Linux:
+  python3 -m venv .venv
+  source .venv/bin/activate
+  python -m pip install --upgrade pip
+  pip install -r requirements.txt
+  streamlit run app/main.py
+
+Чтобы включить классификацию, создайте папки data/train/<название_класса>/ и поместите туда аудиозаписи с проверенными метками. Затем выполните:
+  python -m app.train
+
+Важно: архив содержит исходный код прототипа, но не содержит готовой обученной модели и размеченного набора данных. Без них приложение показывает аудиосигнал и мел-спектрограмму, но не может достоверно определить вид животного.
